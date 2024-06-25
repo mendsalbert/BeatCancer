@@ -12,6 +12,7 @@
     "@dnd-kit/core": "6.0.8",
     "@dnd-kit/sortable": "7.0.2",
     "@privy-io/react-auth": "1.65.0",
+    "@tabler/icons-react": "^3.7.0",
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
     "appwrite": "14.0.1",
