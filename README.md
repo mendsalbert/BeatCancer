@@ -66,14 +66,10 @@ Our user interface is designed to provide a comprehensive view of the patient's 
 
 ### Screenshots
 
-1. **Dashboard Overview**
-   ![Dashboard Overview](./path_to_image1.png)
+<a href="https://ibb.co/hWHZ2Zj"><img src="https://i.ibb.co/Ph4919n/Screenshot-2024-06-26-at-9-12-01-AM.png" alt="Screenshot-2024-06-26-at-9-12-01-AM" border="0"></a>
+<img src="https://i.ibb.co/qRY3Lxs/Screenshot-2024-06-26-at-9-14-31-AM.png" alt="Screenshot-2024-06-26-at-9-14-31-AM" border="0">
 
-2. **Treatment Plan Details**
-   ![Treatment Plan Details](./path_to_image2.png)
-
-3. **Record Management**
-   ![Record Management](./path_to_image3.png)
+   <img src="https://i.ibb.co/vJPVVKZ/Screenshot-2024-06-26-at-9-12-11-AM.png" alt="Screenshot-2024-06-26-at-9-12-11-AM" border="0">
 
 ### Getting Started
 

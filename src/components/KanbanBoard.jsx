@@ -16,13 +16,13 @@ function KanbanBoard({ state }) {
   console.log(state);
 
   const defaultCols =
-    state?.state?.[0]?.columns?.map((col) => ({
+    state?.state?.columns?.map((col) => ({
       id: col?.id,
       title: col?.title,
     })) || [];
 
   const defaultTasks =
-    state?.state?.[0]?.tasks?.map((task) => ({
+    state?.state?.tasks?.map((task) => ({
       id: task?.id,
       columnId: task?.columnId,
       content: task?.content,
