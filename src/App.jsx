@@ -1,12 +1,30 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { Sidebar, Navbar } from "./components";
 import { Home, Profile } from "./pages";
 import MedicalRecords from "./pages/records/index";
 import ScreeningSchedule from "./pages/ScreeningSchedule";
 import SingleRecordDetails from "./pages/records/single-record-details";
+import { usePrivy } from "@privy-io/react-auth";
 
 const App = () => {
+  const { ready, authenticated, login, user, logout } = usePrivy();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (ready && !authenticated) {
+      login();
+    }
+  }, [ready, authenticated, login]);
+
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
+
+  if (!authenticated) {
+    return <div className="bg-[#13131a]"></div>; // or a placeholder component
+  }
+
   return (
     <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
       <div className="sm:flex hidden mr-10 relative">
@@ -19,7 +37,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-
           <Route path="/medical-records" element={<MedicalRecords />} />
           <Route
             path="/medical-records/:id"
