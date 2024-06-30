@@ -46,19 +46,20 @@ const DisplayCampaigns = () => {
             if (record.kanban_records) {
               try {
                 const kanban = JSON.parse(record.kanban_records);
-                aiPersonalizedTreatment += kanban[0].columns.some(
+                console.log(kanban);
+                aiPersonalizedTreatment += kanban.columns.some(
                   (column) => column.title === "AI Personalized Treatment"
                 )
                   ? 1
                   : 0;
-                totalScreenings += kanban[0].tasks.length;
-                completedScreenings += kanban[0].tasks.filter(
+                totalScreenings += kanban.tasks.length;
+                completedScreenings += kanban.tasks.filter(
                   (task) => task.columnId === "done"
                 ).length;
-                pendingScreenings += kanban[0].tasks.filter(
+                pendingScreenings += kanban.tasks.filter(
                   (task) => task.columnId === "doing"
                 ).length;
-                overdueScreenings += kanban[0].tasks.filter(
+                overdueScreenings += kanban.tasks.filter(
                   (task) => task.columnId === "overdue"
                 ).length;
               } catch (error) {
