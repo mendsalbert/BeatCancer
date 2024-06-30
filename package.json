@@ -30,7 +30,7 @@
     "rehype-katex": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
-    "vite-plugin-node-polyfills": "0.6.0"
+    "vite-plugin-node-polyfills": "^0.22.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2",
