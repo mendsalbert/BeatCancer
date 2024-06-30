@@ -46,7 +46,6 @@ const DisplayCampaigns = () => {
             if (record.kanban_records) {
               try {
                 const kanban = JSON.parse(record.kanban_records);
-                console.log(kanban);
                 aiPersonalizedTreatment += kanban.columns.some(
                   (column) => column.title === "AI Personalized Treatment"
                 )
